@@ -3,8 +3,8 @@ import json
 import traceback
 import pandas as pd
 from dotenv import load_dotenv
-from .utils import read_file, get_table_data
-from .logger import logging
+from mcqgenrator.utils import read_file, get_table_data
+from mcqgenrator.logger import logging
 #imporing necessary packages packages from langchain
 from langchain_openai import ChatOpenAI
 from langchain.prompts import ChatPromptTemplate, PromptTemplate
@@ -15,7 +15,7 @@ import PyPDF2
 load_dotenv()
 
 # Access the environment variables just like you would with os.environ
-KEY="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"
+KEY="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"
 llm= ChatOpenAI(
   base_url="https://openrouter.ai/api/v1",
   api_key=KEY,
