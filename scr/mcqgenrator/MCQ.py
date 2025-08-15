@@ -15,7 +15,7 @@ import PyPDF2
 load_dotenv()
 
 # Access the environment variables just like you would with os.environ
-KEY="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"
+KEY = os.getenv("OPENROUTER_API_KEY")
 llm= ChatOpenAI(
   base_url="https://openrouter.ai/api/v1",
   api_key=KEY,
